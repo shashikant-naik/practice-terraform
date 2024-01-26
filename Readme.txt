@@ -68,6 +68,13 @@ Types of Blocks in Terraform:
 8. Locals Block
     Defines local values that can be used within a Terraform module or configuration file.
         locals { instance_name = "my-instance" }
+
+Functions:
+number of built-in functions that you can call from within expressions to transform and combine values.
+    max(5, 12, 9)
+    lookup(map, key, default)
+
+
 --------
 
 Every resource wll have Argument reference, Attribute reference
