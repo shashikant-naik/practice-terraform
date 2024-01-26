@@ -27,5 +27,5 @@ output "Fruits_details" {
 }
 
 output "Orange_price_lookup" {
-  value = var.fruits["apple"]["qty"]
+  value = lookup(var.fruits,["apple"]["qty"],"none")
 }
