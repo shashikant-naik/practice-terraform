@@ -1,3 +1,3 @@
-output "printHello"{
+output "printHello" {
   value = "Hello World"
 }
