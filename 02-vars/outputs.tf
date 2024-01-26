@@ -27,5 +27,5 @@ output "Fruits_details" {
 }
 
 output "Orange_price_lookup" {
-  value = "Orange Price: ${lookup(var.fruits,["orange"]{"price"],"none")}"
+  value = var.fruits["apple"]["qty"]
 }
