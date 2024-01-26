@@ -23,5 +23,5 @@ output "second_in_map" {
 }
 
 output "Fruits_details" {
-  value = "Fruit name - apple, qty - ${var.fruits.["apple"].apple["qty"]}"
+  value = "Fruit name - apple, qty - ${var.fruits.["apple"]["qty"]}"
 }
