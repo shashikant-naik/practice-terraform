@@ -1,3 +1,9 @@
+Terraform Install (Centos/redhat):
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+sudo yum -y install terraform
+----
+
 Argument:
 An argument assigns a value to a particular name:
 image_id = "abc123"
@@ -45,6 +51,7 @@ Types of Blocks in Terraform:
         resource "aws_instance" "example"
         { ami = "ami-0c94855ba95c71c99"
         instance_type = "t2.micro" }
+    Every resource wll have Argument reference, Attribute reference
 
 4. Data Block
     used to fetch data from external sources or existing resources
@@ -77,8 +84,6 @@ number of built-in functions that you can call from within expressions to transf
 
 --------
 
-Every resource wll have Argument reference, Attribute reference
-
 provider => aws
 module   => s3_bucket
 
@@ -91,11 +96,7 @@ versions.tf         outputs.tf      variables.tf
 main.tf
 
 ---
-Terraform Install:
-wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
-sudo apt update && sudo apt install terraform
-----
+
 
 
 
