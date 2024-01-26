@@ -97,6 +97,14 @@ main.tf
 
 ---
 
+Error: No valid credential sources found
+    aws configure
+    AWS Access Key ID [None]: xx
+    AWS Secret Access Key [None]: xx
+    Default region name [None]: us-east-1
+
+    creates ~/.aws/config file
+
 
 
 
