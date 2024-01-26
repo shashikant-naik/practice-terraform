@@ -10,7 +10,7 @@ output "second_val_world" {
   value = var.world[1]
 }
 
-output "2nd_val_world" {
+output "second_val_element_world" {
   value = element(var.world, 4)
 }
 
@@ -23,5 +23,5 @@ output "second_in_map" {
 }
 
 output "Fruits_details" {
-  value = "Fruit name - apple, qty - ${var.fruits["apple"]["qty"]}
+  value = "Fruit name - apple, qty - ${var.fruits.["apple"].apple["qty"]}"
 }
