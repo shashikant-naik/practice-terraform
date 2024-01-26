@@ -1,6 +1,6 @@
 provider "aws" {
   region = "us-east-1"
-  shared_credentials_file = ["~/.aws/config"]
+  shared_credentials_files = ["~/.aws/config"]
 }
 
 resource "aws_instance" "frontend" {
