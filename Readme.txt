@@ -96,16 +96,14 @@ versions.tf         outputs.tf      variables.tf
 main.tf
 
 ---
+Issues:
 
-Error: No valid credential sources found
-    aws configure
-    AWS Access Key ID [None]: xx
-    AWS Secret Access Key [None]: xx
-    Default region name [None]: us-east-1
-
-    creates ~/.aws/config file
+1. Error: No valid credential sources found
+        Run aws configure command which creates ~/.aws/config file.
+        In provider "aws" module add argument: shared_credentials_files = ["~/.aws/config"]
 
 
+2.
 
 
 
