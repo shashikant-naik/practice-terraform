@@ -20,3 +20,4 @@ resource "aws_route53_record" "frontend" {
   zone_id = var.zone_id #Copy from console
   records = [aws_instance.frontend.public_ip]
 }
+
