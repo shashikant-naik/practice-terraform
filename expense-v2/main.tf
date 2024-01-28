@@ -18,6 +18,6 @@ resource "aws_route53_record" "frontend" {
   type    = "A"
   ttl     = 30
   zone_id = var.zone_id #Copy from console
-  records = [aws_instance.frontend.public_ip]
+  records = [aws_instance.frontend.private_ip]
 }
 

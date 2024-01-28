@@ -1,0 +1,29 @@
+Issue:
+ Error: Incorrect attribute value type
+│
+│   on main.tf line 9, in resource "aws_instance" "frontend":
+│    9:   vpc_security_group_ids  = var.vpc_security_group_ids
+│     ├────────────────
+│     │ var.vpc_security_group_ids is "sg-020d530177af68806"
+│
+│ Inappropriate value for attribute "vpc_security_group_ids": set of string required.
+
+Solution:
+Define vpc_security_group_ids as list
+vpc_security_group_ids  = [var.vpc_security_group_ids]
+
+
+----
+Issue:
+ Error: Inconsistent dependency lock file
+│
+│ The following dependency selections recorded in the lock file are inconsistent with the current configuration:
+│   - provider registry.terraform.io/hashicorp/aws: required by this configuration but no version is selected
+│
+│ To make the initial dependency selections that will initialize the dependency lock file, run:
+│   terraform init
+
+Solution:
+Run terraform init first
+
+-------
