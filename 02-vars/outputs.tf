@@ -18,6 +18,7 @@ output "value_in_map" {
   value = var.list["abc"]
 }
 
+
 output "second_in_map_lookup" {
   value = lookup(var.list,"abc1","none")
 }
