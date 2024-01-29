@@ -81,7 +81,11 @@ number of built-in functions that you can call from within expressions to transf
     max(5, 12, 9)
     lookup(map, key, default)
 
+provisioner:
+for executing command.
 
+provisioner "local-exec"
+    { command = "echo ${key}"
 --------
 
 provider => aws
@@ -96,14 +100,11 @@ versions.tf         outputs.tf      variables.tf
 main.tf
 
 ---
-Issues:
+Loops:
 
-1. Error: No valid credential sources found
-        Run aws configure command which creates ~/.aws/config file.
-        In provider "aws" module add argument: shared_credentials_files = ["~/.aws/config"]
+Avoid using Count as loop function. In case ur having list and content order gets changed.
+High chances Terraform may destroy and recreate resources.
 
-
-2.
 
 
 

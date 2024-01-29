@@ -1,4 +1,14 @@
 Issue:
+
+1. Error: No valid credential sources found
+
+Solution:
+Run aws configure command which creates ~/.aws/config file.
+In provider "aws" module add argument: shared_credentials_files = ["~/.aws/config"]
+
+-----
+
+Issue:
  Error: Incorrect attribute value type
 │
 │   on main.tf line 9, in resource "aws_instance" "frontend":
