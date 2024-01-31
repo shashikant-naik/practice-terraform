@@ -10,7 +10,7 @@ resource "aws_instance" "instances" {
   vpc_security_group_ids  = [var.vpc_security_group_ids]
 
   tags = {
-    Name = lookup(each.value, "name",null)-dev"
+    Name = lookup(each.value, "name",null)-dev
   }
 }
 
@@ -20,7 +20,7 @@ resource "aws_route53_record" "records" {
   type     = "A"
   ttl      = 30
   zone_id  = var.zone_id #Copy from console
-  records  = [lookup(lookup(aws_instance.instances, each.key, null)),"private_ip", null)]
+  records  = [lookup(lookup(aws_instance.instances, each.key, null),"private_ip", null)]
   [element(aws_instance.instances.*.private_ip, count.index)]
 }
 
