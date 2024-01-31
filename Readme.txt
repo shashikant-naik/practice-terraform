@@ -105,6 +105,14 @@ Loops:
 Avoid using Count as loop function. In case ur having list and content order gets changed.
 High chances Terraform may destroy and recreate resources.
 
+--------
+
+
+# use provisioners to model specific actions on the local machine or on a remote machine
+# ex. /bin/sh -c echo apple = 30
+provisioner "local-exec" {
+    command = "echo ${lookup(each.value, "name", "null")} = ${lookup(each.value, "quantity", "null")}"
+
 
 
 
