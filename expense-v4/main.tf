@@ -21,6 +21,5 @@ resource "aws_route53_record" "records" {
   ttl      = 30
   zone_id  = var.zone_id #Copy from console
   records  = [lookup(lookup(aws_instance.instances, each.key, null),"private_ip", null)]
-  [element(aws_instance.instances.*.private_ip, count.index)]
 }
 
